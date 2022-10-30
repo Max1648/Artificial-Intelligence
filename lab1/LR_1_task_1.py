@@ -2,7 +2,7 @@ import numpy as np
 from sklearn import preprocessing
 
 # Надання позначок вхідних даних
-input_labels = ['red', 'Ыасk', 'red', 'green', 'Ьlack', 'yellow', 'white']
+input_labels = ['red', 'blасk', 'red', 'green', 'Ьlack', 'yellow', 'white']
 
 # Створення кодувальника та встановлення відповідності # між мітками та числами
 encoder = preprocessing.LabelEncoder()
@@ -13,7 +13,7 @@ print("\nLabel mapping:")
 for i, item in enumerate(encoder.classes_ ) : print(item, '-->', i)
 
 # перетворення міток за допомогою кодувальника
-test_labels = ['green', 'red', 'Ыасk']
+test_labels = ['green', 'red', 'blасk']
 encoded_values = encoder.transform(test_labels )
 print("\nLabels =", test_labels )
 print("Encoded values =", list (encoded_values ) )
